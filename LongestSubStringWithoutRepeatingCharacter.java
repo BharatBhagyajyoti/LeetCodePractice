@@ -36,6 +36,23 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class LongestSubStringWithoutRepeatingCharacter {
+    
+    
+
+    public static void main(String[] args) {
+        LongestSubStringWithoutRepeatingCharacter solution = new LongestSubStringWithoutRepeatingCharacter();
+
+        // Test cases
+        String s1 = "abcabcbb";
+        String s2 = "bbbbb";
+        String s3 = "pwwkew";
+
+        System.out.println("Longest substring length for \"" + s1 + "\": " + solution.lengthOfLongestSubstring(s1)); // Output: 3
+        System.out.println("Longest substring length for \"" + s2 + "\": " + solution.lengthOfLongestSubstring(s2)); // Output: 1
+        System.out.println("Longest substring length for \"" + s3 + "\": " + solution.lengthOfLongestSubstring(s3)); // Output: 3
+    }
+
+    //Your Answer starts here
     public int lengthOfLongestSubstring(String s) {
         int n = s.length();
         if (n == 0) return 0;
@@ -54,18 +71,5 @@ public class LongestSubStringWithoutRepeatingCharacter {
         }
 
         return maxLength;
-    }
-
-    public static void main(String[] args) {
-        LongestSubStringWithoutRepeatingCharacter solution = new LongestSubStringWithoutRepeatingCharacter();
-
-        // Test cases
-        String s1 = "abcabcbb";
-        String s2 = "bbbbb";
-        String s3 = "pwwkew";
-
-        System.out.println("Longest substring length for \"" + s1 + "\": " + solution.lengthOfLongestSubstring(s1)); // Output: 3
-        System.out.println("Longest substring length for \"" + s2 + "\": " + solution.lengthOfLongestSubstring(s2)); // Output: 1
-        System.out.println("Longest substring length for \"" + s3 + "\": " + solution.lengthOfLongestSubstring(s3)); // Output: 3
     }
 }
